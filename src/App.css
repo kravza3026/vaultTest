@@ -1,0 +1,199 @@
+:root {
+  --primary: #080A0B;
+  --gray:#1E2429;
+  --gray-light:#3C4A55;
+  --gray-card:#171C20;
+  --light:#D9D9D9;
+  --light-blue:#00FFFF;
+  --secondary: #F97316;
+  --accent: #C3FF00;
+  --muted: #6B7280;
+  --background: #F3F4F6;
+  --text: white;
+  --text-gray:#4B5154;
+  --text-disabled: #4B555E;
+  --purpure: rgba(136, 0, 255, 0.99);
+  --light:#D9D9D9;
+}
+
+/* --------------------------
+   Додаємо утиліти через Tailwind
+---------------------------*/
+@layer utilities {
+  .bg-card-gray { background-color: var(--gray-card)}
+  .bg-primary { background-color: var(--primary); }
+  .bg-gray-base { background-color: var(--gray); }
+  .bg-light-blue { background-color: var(--light-blue); }
+  .bg-gray-light { background-color: var(--gray-light); }
+  .bg-light { background-color: var(--light); }
+  .bg-secondary { background-color: var(--secondary); }
+  .bg-accent { background-color: var(--accent); }
+  .bg-muted { background-color: var(--muted); }
+  .bg-purpure { background-color: var(--purpure); }
+  .bg-background { background-color: var(--background); }
+  .bg-accent { background-color: var(--accent); }
+
+  .text-grey-light { background-color: var(--gray-light); }
+  .text-primary { color: var(--primary); }
+  .text-secondary { color: var(--secondary); }
+  .text-accent { color: var(--accent); }
+  .text-muted { color: var(--muted); }
+  .text-background { color: var(--background); }
+  .text-text { color: var(--text); }
+  .text-gray { color: var(--text-gray); }
+  .text-disabled { color: var(--text-disabled); }
+
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 3px 9.1px rgba(255, 255, 255, 0.45);
+  }
+}
+
+body{
+  font-family: 'Rajdhani', sans-serif;
+}
+#root {
+  max-width: 1520px;
+  width: 100%;
+  margin: 0 auto;
+}
+main{
+  min-height: 100vh;
+  margin-top: 120px;
+}
+#bg{
+  background-color: var(--primary);
+}
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+.rajdhani-light {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.rajdhani {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.rajdhani-medium {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.rajdhani-semibold {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.rajdhani-bold {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SportyPro';
+  src: url('@/assets/fonts/sporty-pro-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+.SportyPro{
+  font-family: "SportyPro"!important;
+}
+
+.font-rajdhani{
+  font-family: "Rajdhani", sans-serif;
+}
+.bg-white-20-to-blue {
+  background-image: linear-gradient(to right, white 0%, #00FFFF 80%, #00FFFF 50%);
+}
+.bg-purpure-20-to-gray {
+  background-image: linear-gradient(to right, var(--purpure) 0%, rgba(30, 36, 41, 0) 70%);
+}
+.my-gradient-border {
+
+  border-image-slice: 1;
+  border-width: 4px;
+  border-image-source: linear-gradient(to right, white, #00FFFF);
+}
+
+/* Smooth radial glow */
+.radial-glow {
+  background: radial-gradient(
+          circle at center,
+          rgba(229, 231, 235, 0.12) 0%,
+          rgba(229, 231, 235, 0.11) 8%,
+          rgba(229, 231, 235, 0.10) 14%,
+          rgba(229, 231, 235, 0.09) 20%,
+          rgba(229, 231, 235, 0.08) 26%,
+          rgba(229, 231, 235, 0.07) 32%,
+          rgba(229, 231, 235, 0.06) 38%,
+          rgba(229, 231, 235, 0.055) 42%,
+          rgba(156, 163, 175, 0.05) 46%,
+          rgba(156, 163, 175, 0.045) 50%,
+          rgba(156, 163, 175, 0.04) 54%,
+          rgba(156, 163, 175, 0.035) 58%,
+          rgba(156, 163, 175, 0.03) 62%,
+          rgba(156, 163, 175, 0.025) 66%,
+          rgba(156, 163, 175, 0.02) 70%,
+          rgba(156, 163, 175, 0.015) 75%,
+          rgba(156, 163, 175, 0.01) 80%,
+          rgba(156, 163, 175, 0.008) 85%,
+          rgba(156, 163, 175, 0.005) 90%,
+          transparent 100%
+  );
+}
+.radial-glow-purpure {
+  background: radial-gradient(
+          circle at center,
+          rgba(136, 0, 255, 0.72) 0%,
+          rgba(136, 0, 255, 0.05) 90%,
+          transparent 100%
+  );
+}
+.clipBox{
+  clip-path: polygon(20px 0, 100% 20px, 100% 100%, 0 100%, 0 0);
+}
