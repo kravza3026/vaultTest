@@ -1,5 +1,4 @@
 import { Header } from './components/Header'
-import { Footer } from './components/Footer'
 import graph from '@/assets/images/bg_graph.svg'
 import './App.css'
 import {WelcomeSection} from "@/components/WelcomeSection";
